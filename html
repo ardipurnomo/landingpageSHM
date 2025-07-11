@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Healing Guide - Sedona Method | Transformasi Hidup dalam 49rb</title>
+    <meta name="description" content="Ubah hidup kamu dalam 49rb. Metode healing yang terbukti mengubah jutaan hidup. Lepas dari beban emosional, raih kebahagiaan sejati.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts with display=swap for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base styles for typography and background */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            background-color: #f8fafc; /* bg-slate-50 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Visual effect styles */
+        .highlight {
+            background: linear-gradient(120deg, #facc15 0%, #fb923c 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 45%;
+            background-position: 0 85%;
+            padding: 0 4px;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Animation styles */
+        .pulse-animation {
+            animation: pulse 2.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+            50% { transform: scale(1.03); box-shadow: 0 25px 50px -12px rgb(79 70 229 / 0.25); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Entrance Animation for revealing content on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="text-slate-700">
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-20 md:pt-24 pb-16 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="font-poppins text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight reveal">
+                MENGAPA HIDUP TERASA <span class="highlight text-slate-900">BERAT</span> PADAHAL BISA <span class="highlight text-slate-900">MUDAH</span>?
+            </h1>
+            
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 opacity-90 reveal" style="transition-delay: 100ms;">
+                Jika kamu merasa seperti terus-menerus melawan arus kehidupan...<br>
+                Ada sesuatu yang <strong>FUNDAMENTAL</strong> yang belum kamu sadari.
+            </p>
+            
+            <div class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 mb-8 shadow-2xl pulse-animation reveal" style="transition-delay: 200ms;">
+                <div class="text-center">
+                    <span class="text-xl sm:text-2xl md:text-3xl text-red-500 line-through">Rp 129.000</span>
+                    <div class="text-5xl sm:text-6xl md:text-7xl font-black my-2 text-emerald-500">Rp 49.000</div>
+                    <div class="text-base sm:text-lg md:text-xl font-semibold gradient-text mb-2">INVESTASI SEKALI UNTUK TRANSFORMASI SEUMUR HIDUP</div>
+                    <div class="text-red-600 font-semibold">*Penawaran Terbatas Untuk 100 Orang Pertama</div>
+                </div>
+            </div>
+            
+            <div class="countdown-timer floating reveal" style="transition-delay: 300ms;">
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block">
+                    <div class="text-sm mb-1 font-semibold">SISA SLOT HARGA SPESIAL:</div>
+                    <div class="text-4xl font-bold text-yellow-300" id="remaining-slots">47</div>
+                    <div class="text-sm">dari 100 pembeli pertama</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Agitation Section -->
+    <section id="problem" class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-slate-800">Apakah Ini Kamu?</h2>
+                <p class="text-center text-lg text-slate-500 mb-12">Jujur pada diri sendiri, apakah kamu merasakan hal-hal ini?</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="space-y-4 reveal" style="transition-delay: 100ms;">
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Sudah berusaha keras tapi hasil tidak sebanding.</p></div>
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Merasa stuck di tempat yang sama bertahun-tahun.</p></div>
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Emosi naik turun tanpa alasan yang jelas.</p></div>
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Hubungan dengan orang lain selalu bermasalah.</p></div>
+                </div>
+                
+                <div class="space-y-4 reveal" style="transition-delay: 200ms;">
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Uang terasa sulit datang dan cepat pergi.</p></div>
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Kesehatan menurun meski sudah jaga pola hidup.</p></div>
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Mimpi dan tujuan terasa semakin jauh dari jangkauan.</p></div>
+                    <div class="flex items-center space-x-4 p-4 bg-slate-100 rounded-lg shadow-sm"><i class="fa-solid fa-circle-xmark text-red-500 text-2xl"></i><p>Merasa ada 'dinding tak terlihat' yang menghalangi.</p></div>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-r-lg text-center reveal" style="transition-delay: 300ms;">
+                <p class="text-lg font-semibold text-slate-800 mb-2">
+                    <strong>Jika jawabanmu "YA" untuk beberapa poin di atas...</strong>
+                </p>
+                <p class="text-xl font-bold text-red-600">
+                    Maka masalahnya BUKAN di luar sana.<br>
+                    <span class="text-2xl">Akar masalahnya ada DI DALAM DIRI KAMU.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-16 sm:py-20 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Inilah Jawaban yang Kamu Cari</h2>
+                <p class="text-lg sm:text-xl text-slate-600 mb-8">Selama 40+ tahun, sebuah metode sederhana telah mengubah hidup <strong>jutaan orang</strong>—dari CEO, artis, hingga orang biasa seperti kita.</p>
+            </div>
+            
+            <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-2xl mb-12 shadow-lg reveal" style="transition-delay: 100ms;">
+                <h3 class="font-poppins text-3xl sm:text-4xl font-bold mb-2">SEDONA METHOD</h3>
+                <p class="text-lg">Seni Melepaskan Beban Emosional untuk Kehidupan yang Lebih Ringan</p>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-10 text-slate-800 reveal" style="transition-delay: 200ms;">Mengapa Sedona Method Begitu Efektif?</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center reveal" style="transition-delay: 300ms;"><div class="bg-green-100 text-green-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-bolt text-xl"></i></div><h4 class="font-bold text-slate-800 mb-2">SIMPEL</h4><p class="text-slate-600">Hanya 3 pertanyaan sederhana untuk melepaskan.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center reveal" style="transition-delay: 400ms;"><div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-rocket text-xl"></i></div><h4 class="font-bold text-slate-800 mb-2">CEPAT</h4><p class="text-slate-600">Rasakan perubahan dalam hitungan menit.</p></div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center reveal sm:col-span-2 lg:col-span-1" style="transition-delay: 500ms;"><div class="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-globe text-xl"></i></div><h4 class="font-bold text-slate-800 mb-2">UNIVERSAL</h4><p class="text-slate-600">Berlaku untuk semua aspek kehidupan.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-slate-800">Bayangkan Hidup Kamu Setelah Ini...</h2>
+                <p class="text-center text-lg text-slate-500 mb-12">Ini bukan hanya mimpi, ini adalah kemungkinan nyata.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-lg reveal" style="transition-delay: 100ms;">
+                    <div class="text-center mb-6"><i class="fas fa-brain text-4xl text-purple-500 mb-4"></i><h3 class="text-xl font-bold text-slate-800">MENTAL & EMOSIONAL</h3></div>
+                    <ul class="space-y-3 text-slate-600"><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Ketenangan batin yang mendalam.</span></li><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Bebas dari cemas dan overthinking.</span></li><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Kebahagiaan yang tulus dari dalam.</span></li></ul>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-lg reveal" style="transition-delay: 200ms;">
+                    <div class="text-center mb-6"><i class="fas fa-briefcase text-4xl text-blue-500 mb-4"></i><h3 class="text-xl font-bold text-slate-800">KARIR & KEUANGAN</h3></div>
+                    <ul class="space-y-3 text-slate-600"><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Menghancurkan mental block kesuksesan.</span></li><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Menarik kelimpahan secara alami.</span></li><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Kepercayaan diri untuk meraih tujuan.</span></li></ul>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 shadow-lg reveal md:col-span-2 lg:col-span-1" style="transition-delay: 300ms;">
+                    <div class="text-center mb-6"><i class="fas fa-heart text-4xl text-red-500 mb-4"></i><h3 class="text-xl font-bold text-slate-800">HUBUNGAN & CINTA</h3></div>
+                    <ul class="space-y-3 text-slate-600"><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Hubungan yang lebih harmonis dan tulus.</span></li><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Melepaskan sakit hati masa lalu.</span></li><li class="flex items-start space-x-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Mencintai diri sendiri tanpa syarat.</span></li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-16 sm:py-20 px-4 sm:px-6 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Mereka Sudah Membuktikannya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="testimonial-card p-8 rounded-2xl reveal" style="transition-delay: 100ms;">
+                    <div class="flex text-yellow-300 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-lg mb-4 italic">"Setelah praktek Sedona Method, hidup saya berubah total. Karir breakthrough, dan yang paling penting: saya akhirnya bahagia menjadi diri saya sendiri."</p>
+                    <div class="flex items-center"><div class="w-10 h-10 bg-pink-300 rounded-full flex items-center justify-center mr-3 font-bold">S</div><span class="font-semibold">Sarah, Marketing Manager</span></div>
+                </div>
+                <div class="testimonial-card p-8 rounded-2xl reveal" style="transition-delay: 200ms;">
+                    <div class="flex text-yellow-300 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-lg mb-4 italic">"Dulu saya adalah tahanan dari emosi saya sendiri. Sekarang saya adalah bosnya. Sedona Method memberi saya kebebasan yang tidak pernah saya bayangkan."</p>
+                    <div class="flex items-center"><div class="w-10 h-10 bg-blue-300 rounded-full flex items-center justify-center mr-3 font-bold">R</div><span class="font-semibold">Rendi, Entrepreneur</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section id="inside" class="py-16 sm:py-20 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-slate-800">Ini Semua yang Akan Kamu Dapatkan</h2>
+                <p class="text-center text-lg text-slate-500 mb-12">Paket lengkap untuk transformasi hidupmu dengan nilai tak terhingga.</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="reveal" style="transition-delay: 100ms;">
+                        <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center gap-3"><i class="fa-solid fa-book-open text-2xl gradient-text"></i>Ebook Komprehensif (100+ Halaman)</h3>
+                        <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                            <li>Filosofi inti Sedona Method</li>
+                            <li>Teknik 3 pertanyaan kunci</li>
+                            <li>Aplikasi di 9 area kehidupan</li>
+                            <li>Teknik lanjutan untuk breakthrough</li>
+                        </ul>
+                    </div>
+                    <div class="reveal" style="transition-delay: 200ms;">
+                        <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center gap-3"><i class="fa-solid fa-highlighter text-2xl gradient-text"></i>Worksheet & Jurnal Praktik</h3>
+                        <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                            <li>Lembar kerja pelepasan (Releasing Worksheet)</li>
+                            <li>Template jurnal harian</li>
+                            <li>Panduan membuat rencana praktik pribadi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-10 pt-8 border-t border-slate-200 reveal" style="transition-delay: 300ms;">
+                    <h3 class="text-2xl font-bold text-center mb-6 gradient-text">BONUS EKSKLUSIF (Senilai Rp 199.000)</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+                        <div class="bg-slate-100 p-4 rounded-lg flex items-center gap-3"><i class="fas fa-gift text-xl text-red-500"></i><span class="font-semibold text-left">Quick Reference Guide</span></div>
+                        <div class="bg-slate-100 p-4 rounded-lg flex items-center gap-3"><i class="fas fa-calendar-check text-xl text-blue-500"></i><span class="font-semibold text-left">30-Day Practice Challenge</span></div>
+                        <div class="bg-slate-100 p-4 rounded-lg flex items-center gap-3"><i class="fas fa-headphones-simple text-xl text-purple-500"></i><span class="font-semibold text-left">Audio Guide Meditasi Pelepasan</span></div>
+                        <div class="bg-slate-100 p-4 rounded-lg flex items-center gap-3"><i class="fas fa-infinity text-xl text-green-500"></i><span class="font-semibold text-left">Gratis Update Materi Seumur Hidup</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value & Honesty Section -->
+    <section class="py-16 sm:py-20 px-4 sm:px-6 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-slate-800">Sebuah Penawaran Penuh Nilai & Kejujuran</h2>
+                <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">Kami ingin Anda membuat keputusan terbaik. Lihatlah nilai yang Anda dapatkan dan untuk siapa panduan ini dibuat.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <!-- Value Stack -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-emerald-500 reveal" style="transition-delay: 100ms;">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-3"><i class="fa-solid fa-gem text-2xl gradient-text"></i>Total Nilai yang Anda Dapatkan</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center"><span>Ebook Simple Healing Guide</span> <span class="font-semibold text-slate-500 line-through">Rp 129.000</span></li>
+                        <li class="flex justify-between items-center"><span>Worksheet & Jurnal</span> <span class="font-semibold text-slate-500 line-through">Rp 49.000</span></li>
+                        <li class="flex justify-between items-center"><span>BONUS: Audio Guide</span> <span class="font-semibold text-slate-500 line-through">Rp 79.000</span></li>
+                        <li class="flex justify-between items-center"><span>BONUS: Update Seumur Hidup</span> <span class="font-semibold text-green-600">Tak Ternilai</span></li>
+                    </ul>
+                    <div class="border-t my-6"></div>
+                    <div class="flex justify-between items-center text-lg font-bold">
+                        <span class="text-slate-800">TOTAL NILAI:</span>
+                        <span class="text-red-500 line-through">Rp 257.000+</span>
+                    </div>
+                    <div class="text-center bg-emerald-100 text-emerald-800 p-4 rounded-lg mt-6">
+                        <p class="font-semibold">Anda Hanya Berinvestasi:</p>
+                        <p class="text-3xl font-extrabold">Rp 49.000</p>
+                    </div>
+                </div>
+                <!-- Is This For You? -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-purple-500 reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-3"><i class="fa-solid fa-circle-question text-2xl gradient-text"></i>Apakah Panduan Ini Untuk Anda?</h3>
+                    <p class="mb-4 text-slate-600">Panduan ini akan sangat efektif jika Anda:</p>
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start space-x-3"><i class="fa-solid fa-check-circle text-green-500 mt-1"></i><span>Merasa 'ada yang salah' tapi tidak tahu apa.</span></li>
+                        <li class="flex items-start space-x-3"><i class="fa-solid fa-check-circle text-green-500 mt-1"></i><span>Siap untuk jujur pada diri sendiri.</span></li>
+                        <li class="flex items-start space-x-3"><i class="fa-solid fa-check-circle text-green-500 mt-1"></i><span>Mau meluangkan waktu 10-15 menit sehari untuk praktik.</span></li>
+                        <li class="flex items-start space-x-3"><i class="fa-solid fa-check-circle text-green-500 mt-1"></i><span>Percaya bahwa perubahan sejati datang dari dalam.</span></li>
+                        <li class="flex items-start space-x-3"><i class="fa-solid fa-check-circle text-green-500 mt-1"></i><span>Mencari solusi praktis, bukan hanya teori motivasi.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-16 sm:py-20 px-4 sm:px-6 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal">Saatnya Ambil Kendali Atas Hidupmu</h2>
+            <p class="text-xl mb-10 reveal" style="transition-delay: 100ms;">Pilihannya ada di tanganmu. Terus seperti sekarang, atau ambil langkah pertama menuju kehidupan yang kamu impikan.</p>
+            
+            <div class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto shadow-2xl reveal" style="transition-delay: 200ms;">
+                <h3 class="font-poppins text-xl sm:text-2xl font-bold mb-4">Dapatkan "Simple Healing Guide" Sekarang!</h3>
+                
+                <div class="mb-6">
+                    <span class="text-xl sm:text-2xl text-red-500 line-through">Rp 129.000</span>
+                    <div class="text-5xl sm:text-6xl font-black my-2 text-emerald-500">Rp 49.000</div>
+                    <div class="text-red-600 font-semibold">*Hanya untuk 100 orang pertama! Sisa slot: <span id="remaining-slots-2">47</span></div>
+                </div>
+                
+                <button id="buy-button" class="btn-primary text-white text-lg sm:text-xl font-bold py-4 px-8 sm:px-12 rounded-xl w-full mb-6 pulse-animation">
+                    <i class="fas fa-download mr-2"></i>
+                    MULAI HEALING JOURNEY SEKARANG
+                </button>
+                
+                <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-sm text-slate-600">
+                    <div class="flex items-center"><i class="fas fa-lock mr-2 text-green-500"></i><span>Pembayaran Aman</span></div>
+                    <div class="flex items-center"><i class="fas fa-bolt mr-2 text-yellow-500"></i><span>Akses Instan</span></div>
+                    <div class="flex items-center"><i class="fas fa-gem mr-2 text-purple-500"></i><span>Nilai Terjamin</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-8 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm text-slate-400 mb-4">
+                © 2025 Simple Healing Guide. All rights reserved. | 
+                <a href="#" class="hover:text-white underline">Privacy Policy</a> | 
+                <a href="#" class="hover:text-white underline">Terms of Service</a>
+            </p>
+            <p class="text-xs text-slate-500 max-w-2xl mx-auto">
+                Disclaimer: Ebook ini adalah panduan edukasi dan berbagi pengalaman. Ini bukan pengganti konsultasi ke psikolog, psikiater, atau dokter. Hasil setiap orang dapat berbeda. Untuk kondisi mental yang serius, selalu konsultasikan dengan profesional kesehatan.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed top-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-xl translate-x-[120%] transform transition-transform duration-500 ease-in-out z-50">
+        <p>Tautan pembayaran akan muncul di sini!</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Slot Counter Animation ---
+            const slotsElements = [document.getElementById('remaining-slots'), document.getElementById('remaining-slots-2')];
+            let currentSlots = 47;
+            
+            function updateSlotsDisplay() {
+                slotsElements.forEach(el => {
+                    if (el) {
+                        el.classList.add('transition-all', 'duration-300', 'transform', 'scale-125', 'opacity-0');
+                        setTimeout(() => {
+                            el.textContent = currentSlots;
+                            el.classList.remove('scale-125', 'opacity-0');
+                        }, 300);
+                    }
+                });
+            }
+
+            setInterval(() => {
+                if (currentSlots > 15) { 
+                    if (Math.random() > 0.6) { 
+                        currentSlots--;
+                        updateSlotsDisplay();
+                    }
+                }
+            }, Math.random() * (25000 - 10000) + 10000);
+
+            // --- Entrance Animation on Scroll ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // --- CTA Button Click Event ---
+            const buyButton = document.getElementById('buy-button');
+            const notification = document.getElementById('notification');
+            
+            if(buyButton) {
+                buyButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    notification.classList.remove('translate-x-[120%]');
+                    notification.innerHTML = `<i class="fa-solid fa-credit-card mr-2"></i> Mengalihkan ke pembayaran aman...`;
+
+                    setTimeout(() => {
+                        notification.classList.add('translate-x-[120%]');
+                    }, 4000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
