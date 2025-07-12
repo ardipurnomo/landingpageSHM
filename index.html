@@ -334,13 +334,17 @@
                     <div class="text-red-600 font-semibold">*Hanya untuk 100 orang pertama! Sisa slot: <span id="remaining-slots-2">47</span></div>
                 </div>
                 
-                <button id="buy-button" class="btn-primary text-white text-lg sm:text-xl font-bold py-4 px-8 sm:px-12 rounded-xl w-full mb-6 pulse-animation">
-                    <i class="fas fa-download mr-2"></i>
-                    MULAI HEALING JOURNEY SEKARANG
-                </button>
+                <!-- The button is now an anchor tag for direct linking -->
+                <a href="https://mindshift.myr.id/pl/simple-healing-tanpa-pusing" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="block btn-primary text-white text-lg sm:text-xl font-bold py-4 px-8 sm:px-12 rounded-xl w-full mb-6 pulse-animation text-center no-underline">
+                    <i class="fas fa-lock mr-2"></i>
+                    AKSES PANDUANNYA SEKARANG!
+                </a>
                 
                 <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-sm text-slate-600">
-                    <div class="flex items-center"><i class="fas fa-lock mr-2 text-green-500"></i><span>Pembayaran Aman</span></div>
+                    <div class="flex items-center"><i class="fas fa-shield-alt mr-2 text-green-500"></i><span>Pembayaran Aman</span></div>
                     <div class="flex items-center"><i class="fas fa-bolt mr-2 text-yellow-500"></i><span>Akses Instan</span></div>
                     <div class="flex items-center"><i class="fas fa-gem mr-2 text-purple-500"></i><span>Nilai Terjamin</span></div>
                 </div>
@@ -362,11 +366,6 @@
         </div>
     </footer>
 
-    <!-- Notification Toast -->
-    <div id="notification" class="fixed top-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-xl translate-x-[120%] transform transition-transform duration-500 ease-in-out z-50">
-        <p>Tautan pembayaran akan muncul di sini!</p>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- Slot Counter Animation ---
@@ -378,8 +377,10 @@
                     if (el) {
                         el.classList.add('transition-all', 'duration-300', 'transform', 'scale-125', 'opacity-0');
                         setTimeout(() => {
-                            el.textContent = currentSlots;
-                            el.classList.remove('scale-125', 'opacity-0');
+                            if(el) {
+                                el.textContent = currentSlots;
+                                el.classList.remove('scale-125', 'opacity-0');
+                            }
                         }, 300);
                     }
                 });
@@ -409,22 +410,6 @@
             document.querySelectorAll('.reveal').forEach((el) => {
                 observer.observe(el);
             });
-
-            // --- CTA Button Click Event ---
-            const buyButton = document.getElementById('buy-button');
-            const notification = document.getElementById('notification');
-            
-            if(buyButton) {
-                buyButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    notification.classList.remove('translate-x-[120%]');
-                    notification.innerHTML = `<i class="fa-solid fa-credit-card mr-2"></i> Mengalihkan ke pembayaran aman...`;
-
-                    setTimeout(() => {
-                        notification.classList.add('translate-x-[120%]');
-                    }, 4000);
-                });
-            }
         });
     </script>
 </body>
