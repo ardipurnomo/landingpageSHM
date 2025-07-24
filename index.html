@@ -64,6 +64,21 @@
         }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* [NEW] Social Proof Pop-up Styles */
+        #social-proof-popup {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            z-index: 50;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            transform: translateX(-150%);
+            opacity: 0;
+        }
+        #social-proof-popup.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
     </style>
     
     <!-- Meta Pixel Code -->
@@ -108,6 +123,7 @@
     </header>
 
     <main>
+        <!-- All other sections remain the same -->
         <!-- Problem Section -->
         <section id="problem" class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div class="max-w-4xl mx-auto">
@@ -328,7 +344,6 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <!-- [MODIFIED] Copyright notice -->
             <p class="text-sm text-gray-400 mb-4">
                 © 2025 Mindshifter Indonesia. All rights reserved. | 
                 <a href="/privacy-policy" class="hover:text-white underline">Privacy Policy</a> | 
@@ -340,8 +355,26 @@
         </div>
     </footer>
 
+    <!-- [NEW] Social Proof Pop-up HTML -->
+    <div id="social-proof-popup" class="bg-white rounded-lg shadow-xl p-4 flex items-center space-x-4 max-w-sm">
+        <div class="flex-shrink-0">
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                <i class="fas fa-check text-xl text-green-600"></i>
+            </div>
+        </div>
+        <div>
+            <p class="font-bold text-gray-800" id="popup-name">Seseorang baru saja membeli!</p>
+            <p class="text-sm text-gray-500" id="popup-location">Beberapa saat yang lalu</p>
+        </div>
+    </div>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            /**
+             * --- SLOT COUNTER SCRIPT ---
+             * Animates a fake "remaining slots" counter to create urgency.
+             */
             const slotsElements = document.querySelectorAll('#remaining-slots');
             let currentSlots = 47;
             
@@ -368,6 +401,10 @@
                 }
             }, Math.random() * (28000 - 12000) + 12000);
 
+            /**
+             * --- ENTRANCE ANIMATION ON SCROLL SCRIPT ---
+             * Uses IntersectionObserver for performance to reveal elements as they enter the viewport.
+             */
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
@@ -381,6 +418,10 @@
                 observer.observe(el);
             });
 
+            /**
+             * --- TESTIMONIAL SLIDER SCRIPT ---
+             * Controls the horizontal scrolling and button states for the testimonial slider.
+             */
             const slider = document.getElementById('testimonial-slider');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
@@ -406,6 +447,37 @@
                 window.addEventListener('resize', updateButtonState, { passive: true });
                 updateButtonState(); 
             }
+
+            /**
+             * --- [NEW] SOCIAL PROOF POP-UP SCRIPT ---
+             * Displays a fake purchase notification to create FOMO and social proof.
+             */
+            const popup = document.getElementById('social-proof-popup');
+            const popupName = document.getElementById('popup-name');
+            const popupLocation = document.getElementById('popup-location');
+
+            const names = ["Andi", "Budi", "Citra", "Dewi", "Eko", "Fitri", "Gilang", "Hesti", "Indra", "Joko", "Kartika", "Lina", "Mega", "Nita", "Putri", "Rian", "Sari", "Tono", "Wulan", "Yusuf"];
+            const locations = ["Jakarta", "Surabaya", "Bandung", "Medan", "Bekasi", "Tangerang", "Depok", "Semarang", "Palembang", "Makassar", "Yogyakarta", "Bogor", "Malang", "Pekanbaru", "Bandar Lampung", "Denpasar", "Padang", "Samarinda", "Banjarmasin", "Manado"];
+
+            function showSocialProof() {
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+
+                popupName.textContent = `${randomName} dari ${randomLocation}`;
+                popupLocation.textContent = "baru saja membeli panduan ini.";
+
+                popup.classList.add('visible');
+
+                setTimeout(() => {
+                    popup.classList.remove('visible');
+                }, 5000); // Popup stays visible for 5 seconds
+            }
+
+            // Show the first popup after a short delay, then randomly afterwards
+            setTimeout(() => {
+                showSocialProof();
+                setInterval(showSocialProof, Math.random() * (20000 - 8000) + 8000); // Random interval between 8-20 seconds
+            }, 7000); // First popup after 7 seconds
         });
     </script>
 </body>
